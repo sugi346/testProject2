@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="jp">
+<head>
+	<meta charset="UTF-8"/>
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/Yoheimnet.xml"/>
+	<title>3D立方体を表示する、アニメーション</title>
+<style type="text/css">
+body {background-color: black;}
+.card {
+	width: 300px;
+	height: 200px;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: 0.5s;
+}
+li:hover .card { -webkit-transform: rotateY(180deg); }
+
+li .face {
+	width: 260px;
+	height: 160px;
+	background: #fff ;
+	padding:20px;
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+}
+li .back {
+	width: 260px;
+	height: 160px;
+	-webkit-transform: rotateY(180deg);
+	background: #fff ;
+	padding:20px;
+}
+li .front { z-index: 10;}
+li:hover .front { z-index: 0;}
+</style>
+</head>
+<body>
+
+<ul>
+	<li>
+		<div class="card">
+			<div class="face front">
+			<h4>おもて</h4>
+			<p>ここにテキスト。</p>
+			</div>
+			<div class="face back">
+			<h4>うら</h4>
+			<p>ここにテキスト。</p>
+			</div>
+		</div>
+	</li>
+</ul>
+
+</body>
+</html>
+
+
